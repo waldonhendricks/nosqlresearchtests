@@ -2,7 +2,6 @@ package za.ac.cput;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -111,7 +110,7 @@ public class App {
 
 
     public static void main( String[] args ) {
-        final ConfigurableApplicationContext run = SpringApplication.run(App.class, args);
+        SpringApplication.run(App.class, args);
         System.out.println( "Hello World!" );
     }
 
