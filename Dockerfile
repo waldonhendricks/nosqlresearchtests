@@ -11,7 +11,7 @@ VOLUME /tmp
 EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=target/nosql-research-tests.jar
+ARG JAR_FILE=target/nosql-research-tests-1.0-SNAPSHOT.jar
 
 # Add the application's jar to the container
 ADD ${JAR_FILE} nosql-research-tests.jar

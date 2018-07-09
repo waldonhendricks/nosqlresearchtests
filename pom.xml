@@ -18,7 +18,7 @@
 
   <name>nosql-research-tests</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://za.ac.cput</url>
+  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,20 +67,6 @@
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
-
-        <plugin>
-          <!-- Build an executable JAR -->
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>2.4</version>
-          <configuration>
-            <archive>
-              <manifest>
-                <mainClass>za.ac.cput.App</mainClass>
-              </manifest>
-            </archive>
-          </configuration>
-        </plugin>
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
@@ -89,14 +75,14 @@
         <plugin>
           <groupId>com.spotify</groupId>
           <artifactId>dockerfile-maven-plugin</artifactId>
-          <version>1.3.6</version>
+          <version>1.4.3</version>
           <configuration>
             <!-- replace `waldonhendricks` with your docker id-->
             <repository>waldonhendricks/nosql-research-tests</repository>
+            <tag>${project.version}</tag>
             <buildArgs>
               <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
             </buildArgs>
-            <!-- replace `waldonhendricks` with your docker id-->
           </configuration>
           <executions>
             <execution>
