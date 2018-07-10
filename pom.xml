@@ -75,6 +75,9 @@
                         <archive>
                             <manifest>
                                 <mainClass>za.ac.cput.AppTest</mainClass>
+                                <archive>
+                                    <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                                </archive>
                             </manifest>
                         </archive>
                     </configuration>
