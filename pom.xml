@@ -69,7 +69,15 @@
             <plugins>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>za.ac.cput.AppTest</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
                 </plugin>
                 <!-- This plugin is used to create a docker image and publish the image to docker hub-->
                 <plugin>
