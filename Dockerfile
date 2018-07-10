@@ -14,7 +14,7 @@ EXPOSE 8080
 ARG JAR_FILE=target/nosql-research-tests-1.0-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} nosql-research-tests.jar
+ADD ${JAR_FILE} nosql-research-tests-1.0-SNAPSHOT.jar
 
 # Run the jar file
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/nosql-research-tests.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/nosql-research-tests-1.0-SNAPSHOT.jar"]
